@@ -14,17 +14,17 @@ for(let i = 1; i <= limit; i++){
   boxEl.className = "box";
   boxEl.append(i);
 
-  if(!(i % dividend)) {
+  if(!(i % dividend) && (i % dividendSec)){
 
     boxEl.innerHTML = `Fizz`;
     boxEl.classList.add("box-fizz");
 
-  }else if(!(i % dividendSec)) {
+  }else if(!(i % dividendSec) && (i % dividend)) {
 
     boxEl.innerHTML = `Buzz`;
     boxEl.classList.add("box-buzz");
 
-  }if (!(i % dividend) && !(i % dividendSec)){
+  }else if (!(i % dividend) && !(i % dividendSec)){
 
     boxEl.innerHTML = `FizzBuzz`;
     boxEl.classList.add("box-fizzbuzz");
